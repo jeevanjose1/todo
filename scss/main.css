@@ -1,0 +1,231 @@
+*,
+*::before,
+* ::after {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #f7f7e8;
+  height: 100vh;
+}
+
+.main .todocontainer {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: #96ac6f;
+  width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+}
+
+.main .todocontainer .field {
+  width: 100%;
+}
+
+.main .todocontainer .heading {
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.main .todocontainer .inp {
+  width: 20rem;
+  height: 3rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.main .todocontainer .inp::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 0rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.main .todocontainer .inp:-ms-input-placeholder {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 0rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.main .todocontainer .inp::-ms-input-placeholder {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 0rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.main .todocontainer .inp::placeholder {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 0rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.main .todocontainer .inp:focus::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.main .todocontainer .inp:focus:-ms-input-placeholder {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.main .todocontainer .inp:focus::-ms-input-placeholder {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.main .todocontainer .inp:focus::placeholder {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.main .todocontainer .btn {
+  width: 5rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: 0;
+  border: 0;
+  margin-left: 1.6rem;
+  background-color: #454e33;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.main .todocontainer .btn:hover {
+  background-color: #557174;
+}
+
+.main .todocontainer .mainres {
+  width: 100%;
+}
+
+.main .todocontainer .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f7f7e8;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+  padding: 0.7rem 1rem;
+  -webkit-animation: anim 0.3s ease-in;
+          animation: anim 0.3s ease-in;
+}
+
+.main .todocontainer .result .resfield {
+  color: #1d3f28;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.main .todocontainer .result .delete {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: #9dad7f;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.main .todocontainer .result .delete:hover {
+  color: #557174;
+}
+
+.main .todocontainer .result .delete .fa-backspace {
+  background: none;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+.error {
+  background-color: brown !important;
+}
+
+@-webkit-keyframes anim {
+  from {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes anim {
+  from {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */

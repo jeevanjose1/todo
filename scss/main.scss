@@ -1,0 +1,130 @@
+*,
+*::before,
+* ::after {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f7f7e8;
+
+  height: 100vh;
+  .todocontainer {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: #96ac6f;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    .field {
+      width: 100%;
+    }
+    .heading {
+      color: white;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      font-size: 2rem;
+      letter-spacing: 4px;
+    }
+    .inp {
+      width: 20rem;
+      height: 3rem;
+      padding: 1rem;
+      outline: none;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+    .inp::placeholder {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      opacity: 0.5;
+      width: 0rem;
+      transition: all 0.2s ease;
+    }
+    .inp:focus::placeholder {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      opacity: 0.5;
+      width: 100%;
+    }
+    .btn {
+      width: 5rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      outline: 0;
+      border: 0;
+      margin-left: 1.6rem;
+      background-color: #454e33;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover {
+        background-color: #557174;
+      }
+    }
+    .mainres {
+      width: 100%;
+    }
+    .result {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f7f7e8;
+      margin-top: 2rem;
+      border-radius: 0.5rem;
+      width: 100%;
+      height: auto;
+      padding: 0.7rem 1rem;
+      animation: anim 0.3s ease-in;
+
+      .resfield {
+        color: rgb(29, 63, 40);
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .delete {
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        color: #9dad7f;
+        transition: all 0.2s ease;
+        &:hover {
+          color: #557174;
+        }
+        .fa-backspace {
+          background: none;
+          font-size: 1.2rem;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.error {
+  background-color: brown !important;
+}
+
+@keyframes anim {
+  from {
+    transform: translateX(-1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}

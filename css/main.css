@@ -1,0 +1,140 @@
+*,
+*::before,
+* ::after {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f7f7e8;
+  height: 100vh;
+}
+
+.main .todocontainer {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: #c7cfb7;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .todocontainer .field {
+  width: 100%;
+}
+
+.main .todocontainer .heading {
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.main .todocontainer .inp {
+  width: 20rem;
+  height: 3rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.main .todocontainer .inp::placeholder {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 0rem;
+  transition: all 0.2s ease;
+}
+
+.main .todocontainer .inp:focus::placeholder {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.main .todocontainer .btn {
+  width: 5rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: 0;
+  border: 0;
+  margin-left: 1.6rem;
+  background-color: #9dad7f;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.main .todocontainer .btn:hover {
+  background-color: #557174;
+}
+
+.main .todocontainer .mainres {
+  width: 100%;
+}
+
+.main .todocontainer .result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7e8;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+  padding: 0.7rem 1rem;
+  animation: anim 0.3s ease-in;
+}
+
+.main .todocontainer .result .resfield {
+  color: #1d3f28;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.main .todocontainer .result .delete {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: #9dad7f;
+  transition: all 0.2s ease;
+}
+
+.main .todocontainer .result .delete:hover {
+  color: #557174;
+}
+
+.main .todocontainer .result .delete .fa-backspace {
+  background: none;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+.error {
+  background-color: brown !important;
+}
+
+@keyframes anim {
+  from {
+    transform: translateX(-1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
